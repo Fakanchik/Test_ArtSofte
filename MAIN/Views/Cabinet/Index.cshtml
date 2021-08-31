@@ -1,0 +1,16 @@
+﻿@{
+    ViewData["Title"] = "Основная информация";
+}
+<h1>@ViewData["Title"]</h1>
+<label>ФИО пользователя: @Model.FIO</label>
+<br />
+<label>Телефон: @Model.Phone</label>
+<br />
+<label>Электронная почта: @Model.Email</label>
+<br />
+<label>Дата последнего входа: @Model.LastLogin</label>  
+<br /> 
+<form method="post" asp-controller="Cabinet" asp-action="Logout">   
+    <input type="submit" value="Выход" /> 
+ </form>
+ 

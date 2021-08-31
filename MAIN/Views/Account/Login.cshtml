@@ -1,0 +1,28 @@
+﻿@model UserModel
+@{
+    ViewData["Title"] = "Авторизация";
+}
+<h1>@ViewData["Title"]</h1>
+<div class="col-md-4">
+    <section>
+        <form asp-action="Login" method="post">
+            <div class="form-group">
+                <label asp-for="userAuth.Phone"></label>
+                <input asp-for="userAuth.Phone" class="form-control" />
+                <span asp-validation-for="userAuth.Phone" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="userAuth.Password"></label>
+                <input asp-for="userAuth.Password" class="form-control" />
+                <span asp-validation-for="userAuth.Password" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">Войти</button>
+            </div>
+        </form>
+    </section>
+    <div class="text-center">
+        <p>У вас нет аккаунта? Вы можете создать его в меню <a asp-area="" asp-controller="Account" asp-action="Register">Регистрация</a></p>
+    </div>
+</div>
+        

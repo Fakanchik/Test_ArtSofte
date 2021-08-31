@@ -1,0 +1,40 @@
+﻿@model UserModel
+@{
+    ViewData["Title"] = "Регистрация";
+}
+<h1>@ViewData["Title"]</h1> 
+      <div class="col-md-4">
+            <form asp-action="Register" method="post">
+                <div class="form-group">
+                    <label asp-for="userCreate.FIO"></label>
+                    <input asp-for="userCreate.FIO" class="form-control" />
+                    <span asp-validation-for="userCreate.FIO" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="userCreate.Phone"></label>
+                    <input asp-for="userCreate.Phone" class="form-control" />
+                    <span asp-validation-for="userCreate.Phone" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="userCreate.Email"></label>
+                    <input asp-for="userCreate.Email" class="form-control" />
+                    <span asp-validation-for="userCreate.Email" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="userCreate.Password"></label>
+                    <input asp-for="userCreate.Password" class="form-control" />
+                    <span asp-validation-for="userCreate.Password" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="userCreate.PasswordConfirm"></label>
+                    <input asp-for="userCreate.PasswordConfirm" class="form-control" />
+                    <span asp-validation-for="userCreate.PasswordConfirm" class="text-danger"></span>
+                </div>
+                <button type="submit" class="btn btn-primary">Зарегистрироваться</button>
+            </form>
+            <br />
+            <div class="text-center">
+                <p>Уже есть аккаунт? Тогда перейдите в меню <a asp-area="" asp-controller="Account" asp-action="Login">Вход</a></p>
+            </div>
+      </div>
+
